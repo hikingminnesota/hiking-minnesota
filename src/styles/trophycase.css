@@ -1,0 +1,41 @@
+.badges-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.badges-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.no-badges {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.trophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.trophy-slot {
+  background: #f7f7f7;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.trophy-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.trophy-label {
+  font-size: 1rem;
+  font-weight: 600;
+}

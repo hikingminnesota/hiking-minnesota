@@ -1,0 +1,263 @@
+/* =========================================================
+   HEADER / NAVBAR STYLES (Compact Cinematic Version)
+   - Slim 60px height
+   - Light mode only (dark mode removed)
+========================================================= */
+
+/* -------------------------
+   Global base
+-------------------------- */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html, body, #root {
+  min-height: 100%;
+  background-color: #ffffff;
+}
+
+main, .container {
+  background: transparent;
+}
+
+/* -------------------------
+   Navigation Bar
+-------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;              /* reduced from ~100px */
+  padding: 0.4rem 1rem;
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+}
+
+/* -------------------------
+   Brand (logo + text)
+-------------------------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.brand-icon {
+  height: 28px;              /* was 40px */
+  width: 28px;
+}
+
+.logo-light {
+  display: inline;
+}
+
+.brand-text {
+  font-size: 1.1rem;         /* smaller text */
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #000000;
+}
+
+/* -------------------------
+   Navigation Links
+-------------------------- */
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  line-height: 60px;         /* vertically centers text */
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+.nav-links .active {
+  color: #0077cc;
+}
+
+/* -------------------------
+   Auth Area (Login + Logout)
+-------------------------- */
+.auth-area {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.login-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.login-button img {
+  height: 28px;              /* smaller Google button */
+  width: auto;
+}
+
+.logout-button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #005fa3;
+}
+
+.auth-skeleton {
+  width: 160px;
+  height: 28px;
+  border-radius: 6px;
+  opacity: 0;
+}
+
+/* === Force-compact header (wins over globals) === */
+header .container {
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* tighten the bar itself */
+header .navbar {
+  height: 60px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  align-items: center;
+}
+
+/* links can make the bar look taller if line-height is big */
+header .nav-links a {
+  line-height: 60px !important;
+}
+
+/* logo + brand text */
+header .brand-icon {
+  height: 28px !important;
+  width: 28px !important;
+}
+header .brand-text {
+  font-size: 1.1rem;
+  line-height: 60px;
+}
+
+/* Google sign-in image */
+header .login-button img {
+  height: 40px !important;
+  width: auto !important;
+}
+
+/* If you render a button/placeholder before auth loads */
+header .auth-skeleton {
+  height: 28px !important;
+  width: 160px;
+}
+
+/* ==== LOCK HEADER HEIGHT TO 60PX (final guardrails) ==== */
+header {
+  line-height: 0;
+}
+
+header .navbar {
+  height: 60px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+header .brand,
+header .nav-links,
+header .auth-area {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links a {
+  line-height: 60px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  display: inline-block;
+}
+
+header .brand-icon {
+  height: 28px !important;
+  width: 28px !important;
+}
+header .brand-text {
+  margin: 0;
+  line-height: 60px;
+}
+
+header .login-button,
+header .logout-button,
+header .auth-skeleton {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+header .login-button img {
+  height: 40px !important;
+  width: auto !important;
+}
+
+header .g_id_signin,
+header .gsi-material-button {
+  transform: scale(0.85);
+  transform-origin: center right;
+  height: 28px;
+}
+
+/* Kill stray vertical margins inside the bar */
+header .navbar * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+:root {
+  --header-h: 60px;
+}
+
+/* When jumping to anchors on the page, offset by header height */
+:target {
+  scroll-margin-top: var(--header-h);
+}
+
+.user-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #264e2a; /* match your Hiking Minnesota green */
+  color: #fff;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,110 @@
+/* -------------------------
+   Global Reset / Defaults
+-------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ffffff;  /* ✅ unified background */
+  color: #1f2937;             /* dark gray text */
+}
+
+/* -------------------------
+  Stop Browser From "Jumping" To Bottom Of Webpage After Loading Webpage
+-------------------------- */
+
+/* Global scroll behavior: make the window the scroll container and reset instantly */
+html, body { 
+  scroll-behavior: auto !important;
+}
+
+/* Ensure content scrolls the page, not a nested container */
+main { 
+  overflow: visible !important; 
+}
+
+/* If #root had overflow set anywhere, neutralize it */
+#root { 
+  overflow: visible !important; 
+}
+
+
+/* -------------------------
+   Links
+-------------------------- */
+a {
+  text-decoration: none;
+  color: #2563eb; /* blue-600 */
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8; /* darker blue */
+}
+
+/* -------------------------
+   Buttons
+-------------------------- */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* -------------------------
+   Utility Classes
+-------------------------- */
+.hidden {
+  display: none !important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+                0 0 30px rgba(255, 255, 255, 0.4),
+                0 0 45px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+                0 0 50px rgba(255, 255, 255, 0.7),
+                0 0 75px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.hover\\:animate-pulse-glow:hover {
+  animation: pulse-glow 1.2s infinite alternate;
+}

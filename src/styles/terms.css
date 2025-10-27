@@ -1,0 +1,59 @@
+/* src/styles/terms.css */
+
+.terms-container {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #111827;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.terms-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.terms-date {
+  margin-bottom: 1.25rem;
+}
+
+.terms-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.terms-container p,
+.terms-container ul {
+  margin-bottom: 1.25rem;
+}
+
+.terms-container ul {
+  padding-left: 1.25rem;
+}
+
+.terms-container ul li {
+  margin-bottom: 0.75rem;
+}
+
+/* Back button */
+.terms-back-btn {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  margin: 1.5rem auto;
+  transition: background 0.2s ease;
+}
+
+.terms-back-btn:hover {
+  background-color: #0284c7;
+}

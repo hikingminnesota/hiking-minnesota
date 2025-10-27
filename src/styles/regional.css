@@ -1,0 +1,208 @@
+/* === REGIONAL.CSS === */
+
+/* === General Layout === */
+
+.region-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  color: #1a1a1a;
+  font-family: "Oxygen", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Header for each region (Metro, etc.) === */
+.region-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.metro-header {
+  background-color: #d6b3e0; /* light purple header */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.metro-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.metro-header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Metro Image === */
+.metro-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.metro-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* === Hikes List Section === */
+.hikes-list {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+/* Header above list */
+.hikes-list-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pine-icon-large {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.5rem;
+}
+
+.hikes-list-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* The list container */
+.hike-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Individual hike boxes */
+.hike-list-item-wide {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hike-list-item-wide:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge image inside each box */
+.hike-badge-medium {
+  width: 230px;
+  height: 230px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Hike name link */
+.hike-link-wide {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.hike-link-wide:hover {
+  color: #2e7d32; /* subtle forest green accent */
+}
+
+/* === Regional Color Themes (matches Minnesota Map colors) === */
+
+.northwest {
+  background-color: #5FBF48CC;  /* green */
+}
+
+.northshore {
+  background-color: #66B6BBCC;  /* blue */
+}
+
+.central {
+  background-color: #2DD4BFCC;  /* teal */
+}
+
+.westsouthwest {
+  background-color: #F68906CC;  /* orange */
+}
+
+.metro {
+  background-color: #B365F0CC;  /* purple */
+}
+
+.southeast {
+  background-color: #F65C5CCC;  /* red */
+}
+
+/* --- Force the header ABOVE the list, full-width boxes --- */
+.hikes-list {
+  display: flex !important;      /* override any grid/flex-row from earlier */
+  flex-direction: column;        /* stack header then list */
+  align-items: stretch;          /* list spans container */
+  gap: 1rem;
+}
+
+.hikes-list-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hike-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;                     /* list starts right under the header */
+  width: 100%;
+  max-width: 100%;               /* match region-container */
+}
+
+.hike-list-item-wide {
+  width: 100%;
+  box-sizing: border-box;        /* padding doesn’t shrink the width */
+}
+
+/* --- Back to Main Menu Button --- */
+.back-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #007bff;      /* bright blue */
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  background-color: #0069d9;
+  transform: translateY(-1px);
+}
+
+.back-button:active {
+  background-color: #005cbf;
+  transform: translateY(0);
+}
+
+.hike-info { display: flex; flex-direction: column; }
+.hike-address { margin-top: 4px; font-size: 0.9rem; color: #555; }

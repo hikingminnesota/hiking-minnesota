@@ -1,0 +1,8 @@
+:root { --font: 'Oxygen', system-ui, sans-serif; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: var(--font); color: #111827; background: #fafafa; }
+a { color: #0ea5e9; text-decoration: none; }
+a:hover { text-decoration: underline; }

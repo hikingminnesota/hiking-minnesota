@@ -1,0 +1,306 @@
+/* hikes.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;  /* prevents unwanted horizontal scrollbars */
+}
+
+/* Hero section - pictures layout */
+
+/* ===== HERO SECTION (CINEMATIC FULLSCREEN) ===== */
+
+/* === HERO SECTION (CINEMATIC FINAL VERSION) === */
+
+.hero-container {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+  overflow-x: hidden;
+}
+
+.hero-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* Cinematic text overlay */
+.hero-text {
+  position: absolute;
+  bottom: 15%;
+  left: 8%;
+  color: white;
+  z-index: 2;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text h1,
+.hero-text h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 600px;
+}
+
+/* Make second hero slightly smaller for rhythm */
+.hero-second {
+  height: 80vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    bottom: 10%;
+    left: 5%;
+  }
+}
+
+/* ===== END OF HERO SECTION ===== */
+
+.hikes-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+/* Map styling */
+.map-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mn-map {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Regions on the map */
+.region {
+  stroke: #333;
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: fill 0.2s ease, filter 0.2s ease;
+}
+
+.region:hover {
+  filter: brightness(1.15);
+  stroke: #000;
+}
+
+/* Active region (when clicked) */
+.region.active {
+  stroke: #000;
+  stroke-width: 3;
+  filter: brightness(1.25);
+}
+
+/* Region colors (you can tweak as desired) */
+
+.northwest {
+  fill: #a3d9a5;
+  background-color: #a3d9a5;
+}
+.western {
+  fill: #f5b7b1;
+  background-color: #f5b7b1;
+}
+.central {
+  fill: #f9e79f;
+  background-color: #f9e79f;
+}
+.northshore {
+  fill: #85c1e9;
+  background-color: #85c1e9;
+}
+.metro {
+  fill: #d2b4de;
+  background-color: #d2b4de;
+}
+.southeast {
+  fill: #f7dc6f;
+  background-color: #f7dc6f;
+}
+
+.region-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  fill: #000;
+  pointer-events: none;
+}
+
+.region-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  color: #1e1e1e;
+  width: 100%;
+  max-width: 280px;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* Hike list */
+.hikes-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.hike-section {
+  padding: 1rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.region-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hike-section ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.hike-section li {
+  margin-bottom: 0.4rem;
+}
+
+.hike-section a {
+  text-decoration: none;
+  color: #004080;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.hike-section a:hover {
+  color: #00264d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (min-width: 700px) {
+  .hikes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hikes-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.hiking-title {
+  display: flex;
+  align-items: center;     /* vertically aligns logo + text */
+  justify-content: center; /* centers them horizontally */
+  gap: 10px;               /* small space between logo and text */
+  margin-bottom: 0.5rem;   /* tighten spacing before subtext */
+}
+
+.hiking-title img {
+  width: 40px;             /* scale logo smaller */
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Shared centered frame for subtitle + map */
+.map-block {
+  width: min(90vw, 500px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Add breathing room after the last hero image */
+.hero-container {
+  margin-bottom: 95px; /* adjust between 60–100px to taste */
+}
+
+/* Remove any accidental gap directly under the header */
+main > *:first-child,
+.hikes-page > *:first-child,
+.content > *:first-child,
+.hero-container,
+.hero-stack,
+.hero-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* --- Colored cards by region (overrides default background) --- */
+.hikes-list .hike-section.northshore { background: #85c1e9; }
+.hikes-list .hike-section.metro      { background: #d2b4de; }
+.hikes-list .hike-section.southeast  { background: #ebc08e; }
+.hikes-list .hike-section.central    { background: #f9e79f; }
+.hikes-list .hike-section.northwest  { background: #a3d9a5; }
+.hikes-list .hike-section.western    { background: #f5b7b1; }
+
+/* optional: improve contrast */
+.hikes-list .hike-section a { color: #0b2a42; }
+.hikes-list .hike-section a:hover { color: #061b2b; }
