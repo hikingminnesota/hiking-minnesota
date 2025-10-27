@@ -6,15 +6,10 @@ import path from "path";
 import fs from "fs";
 
 export default defineConfig({
+  base: '/hiking-minnesota/',
   plugins: [react()],
   resolve: { alias: { "@": path.resolve(__dirname, "src") } },
-  server: {
-    https: {
-      key: fs.readFileSync("localhost-key.pem"),
-      cert: fs.readFileSync("localhost.pem"),
-    },
-    host: "localhost",
-    port: 5173,
-  },
+server: {
+  port: 5173,
+},
 });
-
