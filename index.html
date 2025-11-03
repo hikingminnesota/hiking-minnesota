@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hiking Minnesota</title>
+    <meta name="description" content="Explore Minnesota’s best hiking trails and collect colorful and unique badges across the state." />
+    <!-- ✅ JSON-LD structured data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Hiking Minnesota",
+      "url": "https://hikingminnesota.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://hikingminnesota.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+      <script src="/text-conversion.js" defer></script>
     <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDBFKK100"></script>
       <script>
@@ -13,7 +29,6 @@
       gtag('config', 'G-6CDBFKK100');
       </script>
     </head>
-  <script src="/text-conversion.js"></script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
