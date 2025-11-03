@@ -1,6 +1,12 @@
 // App.jsx
 // imports at the top
 
+const redirect = sessionStorage.redirect;
+if (redirect) {
+  delete sessionStorage.redirect;
+  window.history.replaceState(null, "", redirect);
+}
+
 import React, { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./styles/index.css";
