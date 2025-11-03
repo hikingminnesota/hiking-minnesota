@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { account, databases, DB_ID, COLLECTION_ID } from "@/lib/appwrite";
 import { ID, Query } from "appwrite";
 import { useEffect } from "react";
+import MinnIcon from '../assets/icons/minn.png';
+import YesIcon from '../assets/icons/yes-button.png';
+import NoIcon from '../assets/icons/no-button.png';
 
 // Two all-beef patties, special sauce, lettuce, cheese, pickes, onions, on a sesame-seed bun.
 const TEST_BADGE_COORDS = { lat: 44.9709309, lng: -93.4949981 }; // Wayzata McDonald's
@@ -47,9 +50,7 @@ export default function TryForBadgeDialog({ onYes, onNo }) {
         <div className="flex flex-col items-center mb-3">
           <div className="flex items-center space-x-2">
             <img
-              src="/src/assets/icons/minn.png"
-              alt="Minnesota outline"
-              className="object-contain inline-block align-middle mr-2 w-[55px] h-auto"
+              src={MinnIcon} alt="Minnesota outline" className="object-contain inline-block align-middle mr-2 w-[55px] h-auto"
             />
             <h2 className="font-bold text-lg text-gray-900">hiking minnesota</h2>
           </div>
@@ -76,9 +77,7 @@ export default function TryForBadgeDialog({ onYes, onNo }) {
               className="focus:outline-none bg-transparent border-none shadow-none p-0 m-0"
             >
               <img
-                src="/src/assets/icons/yes-button.png"
-                alt="Yes button"
-                className="w-[120px] h-auto hover:brightness-110 transition"
+                src={YesIcon} alt="Yes button" className="w-[120px] h-auto hover:brightness-110 transition"
               />
             </button>
 
@@ -90,9 +89,7 @@ export default function TryForBadgeDialog({ onYes, onNo }) {
               className="focus:outline-none bg-transparent border-none shadow-none p-0 m-0"
             >
               <img
-                src="/src/assets/icons/no-button.png"
-                alt="No button"
-                className="w-[120px] h-auto hover:brightness-110 transition"
+                src={NoIcon} alt="No button" className="w-[120px] h-auto hover:brightness-110 transition"
               />
             </button>
           </div>

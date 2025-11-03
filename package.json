@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "cp public/.nojekyll docs/.nojekyll"
   },
   "dependencies": {
     "appwrite": "^14.0.1",
