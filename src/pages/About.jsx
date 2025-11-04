@@ -80,6 +80,24 @@ export default function About() {
           <p>Free GPT Prompts was my attempt to create the utility tool that I needed.</p>
         </div>
 
+          {/* Penguin Cash Section */}
+        <h2 className="about-heading">Penguin Cash</h2>
+        <div className="about-section">
+          <p>
+            My newest project is{" "}
+            <a href="https://penguincash.org" target="_blank" rel="noopener noreferrer">
+              Penguin Cash
+            </a>
+            , a completely free, privacy-first personal finance app for Windows, Mac, and Linux.
+          </p>
+          <p>
+            Where is your money going?  How much are you spending every month on various items?  Years ago, you could buy software to track this information.   Now, companies want you to pay a monthly fee and subscribe.  I think that's garbage.
+          </p>
+          <p>
+          Penguin Cash helps track your personal finances for free.  No cost to download, no subscription, no ads.   It does not track you or sell your data.   It's entirely free.   
+          </p>
+        </div>
+
         {/* --- E-mail Obfuscation System (DO NOT DELETE) --- */}
         <h2 className="about-heading">Contact Info</h2>
         <div className="about-section about-contact">
